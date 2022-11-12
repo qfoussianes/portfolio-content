@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Link to the favicon image -->
-	<link rel="icon" href="images/old-movie-camera.png"> 
+	<link rel="icon" href="images/old-movie-camera.png">
+	<!--Google Font  -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- Link to the reset file -->
 	<link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
@@ -14,37 +23,47 @@
 </head>
 
 <!-- All of the visible code in the page belongs in the body tag -->
-<body>
+
+<body class="home">
 	<!-- Header is a sematic tag page that aids readability -->
 	<header>
 		<!-- Nav is a sematic tag page that aids accessibility -->
 		<nav>
 			<ul>
 				<!-- Since I am on the index file I added class = action to the link to index. -->
-				<li class="active"><a href = "index.html" >Homepage</a></li>
-				<li><a href = "diversecasts.html">Diverse Casts</a></li>
-				<li><a href = "lgbtstories.html">LGBT Stories</a></li>
-				<li><a href = "commentary.html">Commentary</a></li>
+				<li class="active"><a href="index.html">Homepage</a></li>
+				<li><a href="diversecasts.html">Diverse Casts</a></li>
+				<li><a href="lgbtstories.html">LGBT Stories</a></li>
+				<li><a href="commentary.html">Commentary</a></li>
+				<li><a href="tvshows.html">TV Shows</a></li>
 			</ul>
 			<br>
 		</nav>
 		<!-- The h1 is a semantic tag that aids accessibility -->
-		<h1>Welcome</h1>
+		<h1><i class="fa-solid fa-hand"></i> Welcome</h1>
 		<br>
 	</header>
 
 	<!-- Every page should have a main tag for accessibility -->
 	<main>
-		<p>A 2021 study by McKinsey & Company found that there is a serious lack of representation for minority groups in Hollywood. To start, there are few stories which depict minorities or marginalized groups. Moreover, Hollywood’s network of directors, producers, and actors lacks diversity with the majority of its community composed of white, older males. The resulting effects of this homogenized society is that it places white personas and stories as superior to those of marginalized groups and minorities.</p>
+		<p>A 2021 study by McKinsey & Company found that there is a serious lack of representation for minority groups in Hollywood. To start, there are few stories which depict minorities or marginalized groups. Moreover, Hollywood’s network of directors, producers, and actors lacks diversity with the majority of its community composed of white, older males. In fact, in a recent study, researchers discovered that film studio heads were 94% white, and TV network and studio heads were 96% white; senior management in the film industry was 92% white, and senior management in the TV industry was 93% white. The resulting effects of this homogenized society is that it places white personas and stories as superior to those of marginalized groups and minorities.
+		</p>
 		<br>
-		<img src = "images/diversity.jpg" alt="Diverse Group of People" width=200>
+		<img class="home-img" src="images/diversity.jpg" alt="Diverse Group of People" width=200>
 		<br>
-        <p>This website serves as an introduction to films that celebrate diversity. In particular, they either contain either a racially diverse cast or strong LGBT characters. Through the lens of this project, readers will be able to understand the importance of diversity in Hollywood, engage in thoughtful conversations with others, and subsequently seek out further films that portray diversity and underrepresented groups.</p>
+		<p>This website serves as an introduction to films that celebrate diversity. In particular, they either contain either a racially diverse cast or strong LGBT characters. Through the lens of this project, readers will be able to understand the importance of diversity in Hollywood, engage in thoughtful conversations with others, and subsequently seek out further films that portray diversity and underrepresented groups. It is the author’s hope that this website will encourage others to seek out diverse films and other media. Readers are also encouraged to use this content as a conversation starter with friends and family as they explore what it means to be a film of diversity in Hollywood.</p>
 		<br>
-    </main>
+	</main>
 
-    <footer>
+	<!-- Sidebar -->
+	<aside>
+		<h2>About Me</h2>
+		<p>Quinn Foussianes is a second-year graduate student studying UX Research and Design. She is interested in how technology can be designed and implemented to affect community empowerment and global development. Specifically, she would like to apply her education to a nonprofit setting where data and technology strategies are often minimized. Originally from Michigan, she graduated with a degree in psychology and is now studying Information. On the side, she enjoys running, traveling, hiking, and taking film photos. She was initially a film major in undergrad and greatly enjoys watching films that are interesting, captivating, mesmerizing, and focus on marginalized characters.</p>
+	</aside>
+
+	<footer>
 		<p>Quinn Foussianes &copy; 2022</p>
 	</footer>
 </body>
+
 </html>

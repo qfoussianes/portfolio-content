@@ -1,71 +1,188 @@
 /*Add padding and margin to space out the page.
 Make the font larger too.*/
-body{
-	margin:1%;
-	padding:1%;
-	font-size:150%;
+body {
+	margin: 1%;
+	padding: 1%;
+	font-size: 150%;
+
 }
+
+.home {
+	background: url("../images/background-image.jpg");
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: "header header "
+		"main  aside"
+		"footer footer ";
+}
+
 
 /*Make the h1 heading bigger with a bold font*/
-h1{
-	font-size: 2em; 
+h1 {
+	font-size: 2em;
 	font-weight: bold;
+	font-family: 'Secular One', sans-serif;
 }
 
-.active{
+.active {
 	background: white;
-    text-transform: uppercase;
+	text-transform: uppercase;
 	text-align: center;
 }
 
-.active a{
-	text-decoration: none;;
+.active a {
+	text-decoration: none;
+}
+
+/* Grid Area Names */
+
+.home header {
+	grid-area: header;
+}
+
+.home main {
+	grid-area: main;
+}
+
+.home aside {
+	grid-area: aside;
+}
+
+.home footer {
+	grid-area: footer;
 }
 
 /*Style the images*/
-img{
-    height: 175px;
-	width:auto;
-    border: 3px solid blue;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 10px;
+img {
+	height: 175px;
+	width: auto;
+	border: 3px solid blue;
+	padding: 25px;
+	border-radius: 20px;
+	margin: 10px;
+
 }
 
-img:hover{
+img:hover {
 	background-color: #ECFF4D;
 }
 
+/* Animation */
+.home-img {
+	animation: move 4s infinite alternate;
+	animation-timing-function: ease-in-out;
+}
+
+.fa-hand {
+	animation: move 1s infinite alternate;
+	animation-timing-function: ease-in-out;
+}
+
+/* GALLERY PAGE */
+.gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gallery .item {
+	padding: 20px 10px;
+	max-width: 20%;
+}
+
+.gallery figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gallery figcaption {
+	text-align: center;
+	font-size: 16px;
+}
+
+@keyframes move {
+	from {
+		transform: rotate(45deg) scale(.9);
+	}
+
+	to {
+		transform: translateX(0) scale(1);
+	}
+}
+
 /*Make the h2 heading match h1*/
-h2{
-	font-size: 2em; 
+h2 {
+	font-size: 2em;
 	font-weight: bold;
 }
 
 /*Improve the spacing for paragraphs AND headings*/
-p, h1, h2 {
-    padding: 10px;
+p,
+h1,
+h2 {
+	padding: 10px;
 }
 
 /*Add borders around the main components and some
 space too*/
-header, nav, main, footer{
+header,
+nav,
+main,
+footer,
+aside {
 	border: 3px solid red;
-	margin: 20px 0;
+	margin: 20px;
 }
 
 
 /*Change the styling for all of the list 
 items in the nav section*/
-nav li{
+nav li {
 	background-color: #ECFF4D;
-	padding:10px;
-	width:25%;
-	border:1px solid black;
+	padding: 10px;
+	border: 1px solid black;
 	display: inline-block;
-	width: 20%;
+	width: 15%;
 }
 
 /*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
+a:visited {
+	color: #0000FF
+}
 
+/* styles to apply if the user's settings are set to reduced motion */
+@media (prefers-reduced-motion) {
+	.home-img {
+		animation: none;
+	}
+	.fa-hand {
+		animation: none;
+	}
+}
+
+/* responsive styles */
+@media screen and (max-width:991px) {
+	.home {
+		grid-template-areas: "header header"
+			"main main"
+			"aside aside"
+			"footer footer";
+	}
+
+	nav li {
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.gallery {
+		flex-direction: column;
+	}
+
+	.gallery .item {
+		max-width: 100%;
+	}
+
+}
