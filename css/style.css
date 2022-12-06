@@ -17,6 +17,33 @@ body {
 		"footer footer ";
 }
 
+.diverse {
+	display: grid;
+}
+
+.lgbt {
+	display: grid;
+}
+
+.commentary {
+	display: grid;
+}
+
+.skip-to-main-content-link {
+	position: absolute;
+	left: -9999px;
+	z-index: 999;
+	padding: 1em;
+	background-color: black;
+	color: white;
+	opacity: 0;
+  }
+  .skip-to-main-content-link:focus {
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 1;
+  }
+
 
 /*Make the h1 heading bigger with a bold font*/
 h1 {
@@ -163,6 +190,7 @@ a:visited {
 }
 
 /* responsive styles */
+
 @media screen and (max-width:991px) {
 	.home {
 		grid-template-areas: "header header"
@@ -185,4 +213,16 @@ a:visited {
 		max-width: 100%;
 	}
 
+}
+
+@media (min-width: 351px) and (max-width: 900px) {
+	.container {
+		display: grid;
+	}
+}
+
+@media (min-width: 901px) {
+	.container {
+		display: grid;
+	}
 }
